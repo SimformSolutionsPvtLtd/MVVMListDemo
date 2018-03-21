@@ -4,7 +4,7 @@
 
 - [x] Custom navigator for login mudule
 - [x] Protocol base navigation for list module
-- [x] Dynamic binding detail view model (Name and Price)
+- [x] Dynamic binding with generic type detail view model (Name and Price)
 - [x] Advance API layer based on alamofire and object mapper
 - [x] Common view models so we can prevent table view datasouce and delegate in each view controllers
 - [x] Color assests 

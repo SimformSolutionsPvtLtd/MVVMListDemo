@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PIX-JN-w3O">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login-->
+        <scene sceneID="wFf-Sh-naW">
+            <objects>
+                <viewController storyboardIdentifier="LoginVC" title="Login" id="cun-dd-2Mg" customClass="LoginVC" customModule="MVVMListDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GTX-Xx-yle">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oqP-zl-R6C" customClass="LoginTextField" customModule="MVVMListDemo" customModuleProvider="target">
+                                <rect key="frame" x="20" y="149" width="335" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="CZh-Ev-8Cf"/>
+                                </constraints>
+                                <color key="textColor" name="AppBlueColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                        <color key="value" name="AppBlueColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leftTextPedding">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="imageWidth">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="txtImage" value="mail_icon"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="errorColor">
+                                        <color key="value" red="0.91000002619999998" green="0.086000002919999999" blue="0.27500000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Mi-Cz-rCM" customClass="LoginTextField" customModule="MVVMListDemo" customModuleProvider="target">
+                                <rect key="frame" x="20" y="229" width="335" height="50"/>
+                                <color key="textColor" name="AppBlueColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                        <color key="value" name="AppBlueColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leftTextPedding">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="imageWidth">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="txtImage" value="password_icon"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="errorColor">
+                                        <color key="value" red="0.91000002619999998" green="0.086000002919999999" blue="0.27500000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ipr-lI-ma3" customClass="LoginButton" customModule="MVVMListDemo" customModuleProvider="target">
+                                <rect key="frame" x="20" y="309" width="335" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="v2K-gO-Irp"/>
+                                </constraints>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                        <color key="value" name="AppBlueColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnLoginClicked:" destination="cun-dd-2Mg" eventType="touchUpInside" id="M7I-0q-fLQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUV-fe-5Yw" customClass="LoginButton" customModule="MVVMListDemo" customModuleProvider="target">
+                                <rect key="frame" x="20" y="384" width="335" height="45"/>
+                                <state key="normal" title="SignUp">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                        <color key="value" name="AppBlueColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnSignUpClicked:" destination="cun-dd-2Mg" eventType="touchUpInside" id="fun-t2-Hca"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jd8-2y-cBV">
+                                <rect key="frame" x="210" y="439" width="145" height="34"/>
+                                <state key="normal" title="Forgot Password?">
+                                    <color key="titleColor" name="AppBlueColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnForgotPasswordClicked:" destination="cun-dd-2Mg" eventType="touchUpInside" id="mld-hY-J5M"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7Mi-Cz-rCM" firstAttribute="leading" secondItem="oqP-zl-R6C" secondAttribute="leading" id="6C8-v9-55z"/>
+                            <constraint firstItem="Ipr-lI-ma3" firstAttribute="leading" secondItem="zp6-EE-o5u" secondAttribute="leading" constant="20" id="DY5-I4-XfY"/>
+                            <constraint firstItem="Ipr-lI-ma3" firstAttribute="top" secondItem="7Mi-Cz-rCM" secondAttribute="bottom" constant="30" id="Eg4-Ov-HeH"/>
+                            <constraint firstItem="7Mi-Cz-rCM" firstAttribute="trailing" secondItem="oqP-zl-R6C" secondAttribute="trailing" id="PK3-OU-Dor"/>
+                            <constraint firstItem="KUV-fe-5Yw" firstAttribute="top" secondItem="Ipr-lI-ma3" secondAttribute="bottom" constant="30" id="RsV-xN-N1A"/>
+                            <constraint firstItem="jd8-2y-cBV" firstAttribute="top" secondItem="KUV-fe-5Yw" secondAttribute="bottom" constant="10" id="Y9h-P6-oFV"/>
+                            <constraint firstItem="KUV-fe-5Yw" firstAttribute="height" secondItem="Ipr-lI-ma3" secondAttribute="height" id="f2a-A9-62F"/>
+                            <constraint firstItem="zp6-EE-o5u" firstAttribute="trailing" secondItem="Ipr-lI-ma3" secondAttribute="trailing" constant="20" id="gXe-Bd-Eoc"/>
+                            <constraint firstItem="7Mi-Cz-rCM" firstAttribute="top" secondItem="oqP-zl-R6C" secondAttribute="bottom" constant="30" id="gyV-MJ-3aC"/>
+                            <constraint firstItem="KUV-fe-5Yw" firstAttribute="leading" secondItem="Ipr-lI-ma3" secondAttribute="leading" id="hg8-Lv-2d9"/>
+                            <constraint firstItem="KUV-fe-5Yw" firstAttribute="trailing" secondItem="Ipr-lI-ma3" secondAttribute="trailing" id="paX-0I-MkN"/>
+                            <constraint firstItem="oqP-zl-R6C" firstAttribute="leading" secondItem="zp6-EE-o5u" secondAttribute="leading" constant="20" id="sI6-pO-VKP"/>
+                            <constraint firstItem="7Mi-Cz-rCM" firstAttribute="height" secondItem="oqP-zl-R6C" secondAttribute="height" id="sqR-fl-2Ur"/>
+                            <constraint firstItem="jd8-2y-cBV" firstAttribute="trailing" secondItem="KUV-fe-5Yw" secondAttribute="trailing" id="v6X-us-Vv2"/>
+                            <constraint firstItem="oqP-zl-R6C" firstAttribute="top" secondItem="zp6-EE-o5u" secondAttribute="top" constant="85" id="xrP-4j-977"/>
+                            <constraint firstItem="zp6-EE-o5u" firstAttribute="trailing" secondItem="oqP-zl-R6C" secondAttribute="trailing" constant="20" id="yvt-lF-ceD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zp6-EE-o5u"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="uTI-cC-zHd"/>
+                    <connections>
+                        <outlet property="txtPassword" destination="7Mi-Cz-rCM" id="Uhr-3e-eD9"/>
+                        <outlet property="txtUserName" destination="oqP-zl-R6C" id="Roy-ML-nHW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ipo-A0-Ep5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="431.19999999999999" y="104.7976011994003"/>
+        </scene>
+        <!--SignUp-->
+        <scene sceneID="eQc-Hn-YyZ">
+            <objects>
+                <viewController storyboardIdentifier="SignUpVC" title="SignUp" id="60q-tz-6A2" customClass="SignUpVC" customModule="MVVMListDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ogR-Mv-PYg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="1Hr-lr-Tud"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H9t-Pz-XJD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1175.2" y="101.19940029985008"/>
+        </scene>
+        <!--Forgot Password-->
+        <scene sceneID="uWf-u3-Cdx">
+            <objects>
+                <viewController storyboardIdentifier="ForgotPasswordVC" title="Forgot Password" id="8rV-e2-qgP" customClass="ForgotPasswordVC" customModule="MVVMListDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z1T-Lu-laV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="Ueq-de-6F9"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mEr-wU-RuZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1175" y="784"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ISP-4a-J9W">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PIX-JN-w3O" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nQE-La-89r">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cun-dd-2Mg" kind="relationship" relationship="rootViewController" id="uWi-CH-xr5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fit-h3-4Mp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-374" y="105"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mail_icon" width="19" height="15"/>
+        <image name="password_icon" width="18" height="20"/>
+        <namedColor name="AppBlueColor">
+            <color red="0.20000000000000001" green="0.11764705882352941" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

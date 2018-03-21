@@ -25,9 +25,10 @@ class CarSpecificationView: UIView {
     @IBOutlet weak var lblCarName:UILabel!
     @IBOutlet weak var lblCarPrice:UILabel!
     @IBOutlet weak var lblDescription:UILabel!
-    
+
     // MARK:- Variables
     var viewModel : CarSpecificationViewModel!
+
     override func awakeFromNib() {
         
     }
@@ -40,10 +41,10 @@ class CarSpecificationView: UIView {
         lblDisplacement.text    = viewModel.specs.displacement
         lblMaxTorque.text       = viewModel.specs.maxTorque
         lblMaxPower.text        = viewModel.specs.maxPower
-        lblAlternateFuel.text   = viewModel.specs.alternateFuel.getFualDetail()
+        lblAlternateFuel.text   = viewModel.specs.alternateFuel?.getFualDetail()
         lblWheels.text          = viewModel.specs.wheels
         lblFrontBrakeType.text  = viewModel.specs.frontBrakeType?.rawValue
-        lblRearBrakeType.text   = viewModel.specs.rearBrakeType.rawValue
+        lblRearBrakeType.text   = viewModel.specs.rearBrakeType?.rawValue
         viewModel.Name.bindAndFire { (value) in
             self.lblCarName.text = value
         }

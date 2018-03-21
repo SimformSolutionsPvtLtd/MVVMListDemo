@@ -28,7 +28,7 @@ import UIKit
             self.layer.cornerRadius = cornerRadius
         }
     }
-    
+
     // MARK: - View
     override func awakeFromNib() {
         self.setupView()

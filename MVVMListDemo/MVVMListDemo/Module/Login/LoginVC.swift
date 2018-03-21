@@ -12,7 +12,7 @@ class LoginVC: UIViewController {
 
     // MARK:- Variables
     private var navigator: LoginNavigator!
-    
+
     // MARK:- IBOutlets
     @IBOutlet weak var txtUserName: LoginTextField!
     @IBOutlet weak var txtPassword: LoginTextField!

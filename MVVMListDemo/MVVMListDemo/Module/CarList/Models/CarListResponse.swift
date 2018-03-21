@@ -15,7 +15,7 @@ class CarListResponse : BaseModel {
     var message : String?
     var status : Bool?
     var cars : [Car]?
-    
+
     override func mapping(map: Map) {
         message <- map["message"]
         cars <- map["result"]

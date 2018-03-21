@@ -17,12 +17,13 @@ class ResponseArray<T:Mappable> : Mappable {
     required init?(map: Map) {
 
     }
-   
+
     func mapping(map: Map) {
         msg <- map["statusText"]
         status <- map["status"]
         result <- map["result"]
     }
+
 }
 class ResponseObject<T:Mappable> : Mappable {
 
@@ -38,4 +39,5 @@ class ResponseObject<T:Mappable> : Mappable {
         status <- map["status"]
         result <- map["result"]
     }
+    
 }

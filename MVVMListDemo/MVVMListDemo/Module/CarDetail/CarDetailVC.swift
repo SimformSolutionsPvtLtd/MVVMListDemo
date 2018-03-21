@@ -13,8 +13,8 @@ class CarDetailVC: UIViewController {
     // MARK:- IBOutlets
     @IBOutlet weak var imgContainerView: ImageSliderView!
     @IBOutlet weak var detailContainerView: CarSpecificationView!
-    
-    //MARK:- Variables
+
+    // MARK:- Variables
     var car : Car!
     var carSpecViewModel : CarSpecificationViewModel!
     

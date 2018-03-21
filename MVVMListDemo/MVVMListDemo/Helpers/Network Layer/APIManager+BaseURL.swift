@@ -14,5 +14,5 @@ extension APIManager {
         let url = "\(APIConstants.baseUrl)/\(endpoint.rawValue)"
         return url
     }
-    
+
 }

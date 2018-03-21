@@ -8,7 +8,7 @@
 import Foundation 
 import ObjectMapper
 class Car : BaseModel {
-    
+
     // MARK: - Variables
 	var companyOrigin : String?
 	var details : String?
@@ -19,8 +19,7 @@ class Car : BaseModel {
 	var img : [String]?
     var category : CarCategory? {
         get {
-            if specs != nil
-            {
+            if specs != nil {
                 return CarCategory.init(numberOfPerson: specs!.seatingCapacity!)
             }
             return nil
@@ -59,6 +58,7 @@ class Car : BaseModel {
                 return "Couple car have only two seats, often called as two seater car."
             }
         }
+        
     }
     
     override func mapping(map: Map) {

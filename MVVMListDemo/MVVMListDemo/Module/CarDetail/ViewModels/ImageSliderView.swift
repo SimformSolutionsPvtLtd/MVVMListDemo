@@ -13,7 +13,7 @@ class ImageSliderView: UIView {
     @IBOutlet var pageControl : UIPageControl!
     @IBOutlet var scrView : UIScrollView!
     var viewModel : CarSpecificationViewModel!
-    
+
     override func awakeFromNib() {
         
     }
@@ -30,11 +30,11 @@ class ImageSliderView: UIView {
         }
          scrView.contentSize   = CGSize(width: xAxis, height: self.frame.size.height)
     }
+
 }
 
-//MARK:- UIScrollView Delagates
-extension ImageSliderView : UIScrollViewDelegate
-{
+// MARK:- UIScrollView Delagates
+extension ImageSliderView : UIScrollViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
        pageControl.currentPage = Int(self.scrView.contentOffset.x / self.frame.width)

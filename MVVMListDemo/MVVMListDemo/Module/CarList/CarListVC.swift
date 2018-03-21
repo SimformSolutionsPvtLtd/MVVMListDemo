@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 class CarListVC: UIViewController {
-    
+
     // MARK: - IBOutlets
     @IBOutlet weak var tableView:UITableView!
     
@@ -29,7 +29,7 @@ class CarListVC: UIViewController {
         self.serviceCallingModel.getCarList()
     }
     
-    //MARK:- setup api closers
+    // MARK:- setup api closers
     func apiParsingClosers() {
         serviceCallingModel.beforeComplition = { () -> () in
             // Hide indicator
@@ -41,8 +41,7 @@ class CarListVC: UIViewController {
                     return
                 }
                 self.cars = carRes.cars!
-                self.initialiazTableModel()
-               
+                self.initialiaseTableModel()
             }
         }
         serviceCallingModel.Failure = {(meesage) -> () in
@@ -51,7 +50,7 @@ class CarListVC: UIViewController {
         }
     }
     
-    //MARK:- initialise table model
+    // MARK:- initialise table model
     func initialiaseTableModel() -> Void {
         if self.settingDataSource == nil {
             self.settingDataSource = TableViewDataModel.init(items: [cars] as [[AnyObject]],
@@ -71,7 +70,7 @@ class CarListVC: UIViewController {
         }
     }
     
-    //MARK:- setup table closers
+    // MARK:- setup table closers
     func tableViewClouser() -> Void {
         self.tableviewViewCellConfigure = {(cell,item,indexPath) -> Void in
             guard let carListCell = cell as? CarListCell, let car = item as? Car else{
@@ -86,8 +85,8 @@ class CarListVC: UIViewController {
             self.openCarDetail(for: self.cars[indexPath.row])
         }
     }
+
 }
-extension CarListVC : CarDetailRoute
-{
+extension CarListVC : CarDetailRoute {
     
 }

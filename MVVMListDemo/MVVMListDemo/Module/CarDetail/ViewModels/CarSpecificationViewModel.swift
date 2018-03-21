@@ -14,7 +14,7 @@ class CarSpecificationViewModel: NSObject,CarProtocol {
     var specs : Spec!
     var Name: Dynamic<String>
     var Price: Dynamic<String>
-    
+
     init(withCar car : Car ) {
         self.car   = car
         self.specs = car.specs!

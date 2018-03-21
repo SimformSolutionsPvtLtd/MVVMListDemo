@@ -11,7 +11,7 @@ import UIKit
 @IBDesignable class LoginTextField: UITextField {
 
     fileprivate var ImgIcon: UIImageView?
-    
+
     @IBInspectable var errorEntry: Bool = false {
         didSet {
             self.setNeedsDisplay()
@@ -103,8 +103,7 @@ import UIKit
         context?.strokePath()
         
         // setting custom placeholder color
-        if let strPlaceHolder: String = self.placeholder
-        {
+        if let strPlaceHolder: String = self.placeholder {
             self.attributedPlaceholder = NSAttributedString(string:strPlaceHolder,
                                                             attributes:[NSAttributedStringKey.foregroundColor:placeHolerColor])
         }
@@ -113,5 +112,6 @@ import UIKit
     override func leftViewRect(forBounds bounds: CGRect) -> CGRect {
         return CGRect(x: 0, y: 0, width: CGFloat(imageWidth), height: self.frame.height)
     }
+    
 }
 

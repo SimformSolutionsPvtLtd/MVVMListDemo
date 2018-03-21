@@ -16,7 +16,6 @@ private struct TJUserConstants {
     static let LastnameKey            = "LastnameKey"
     static let GenderKey              = "GenderKey"
     static let DOBKey                 = "DOBKey"
-    
 }
 
 enum Gender : String {
@@ -114,8 +113,7 @@ class UserManager {
     }
     
     // user id
-    var userId: Int?
-    {
+    var userId: Int? {
         get {
             return userDefaults.object(forKey: TJUserConstants.userIdKey) as? Int ?? nil
         }
@@ -130,14 +128,14 @@ class UserManager {
     
     // Gender as enum
     var gender : Gender {
-        get{
+        get {
             return Gender(rawValue: self.genderStr!)!
         }
     }
     
     // Full Name
     var fullName : String {
-        get{
+        get {
             return self.firstname! + " "  + self.lastname!
         }
     }

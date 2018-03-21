@@ -1,3 +1,5 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/2c40f465eef84150a3eb8f1182cabc70)](https://www.codacy.com/app/developer_20/MVVMListDemo?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=simformsolutions/MVVMListDemo&amp;utm_campaign=Badge_Grade)
+
 # MVVM list demo
 
 ## Features

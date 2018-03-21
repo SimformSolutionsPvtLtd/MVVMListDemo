@@ -16,7 +16,7 @@ class LoginVC: UIViewController {
     // MARK:- IBOutlets
     @IBOutlet weak var txtUserName: LoginTextField!
     @IBOutlet weak var txtPassword: LoginTextField!
-    
+
     // MARK:- Action Methods
     @IBAction func btnLoginClicked(_ sender: Any) {
         self.dismissKeyboard()

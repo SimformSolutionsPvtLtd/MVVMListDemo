@@ -17,7 +17,7 @@ class CarDetailVC: UIViewController {
     // MARK:- Variables
     var car : Car!
     var carSpecViewModel : CarSpecificationViewModel!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         carSpecViewModel = CarSpecificationViewModel(withCar: self.car)

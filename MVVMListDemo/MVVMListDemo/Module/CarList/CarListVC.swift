@@ -12,7 +12,7 @@ class CarListVC: UIViewController {
 
     // MARK: - IBOutlets
     @IBOutlet weak var tableView:UITableView!
-    
+
     // MARK: - Variables
     var settingDataSource:TableViewDataModel!
     var tableviewDidSelecteAtIndexPath : TableViewDataModel.didSelectItemAtIndex!
@@ -36,7 +36,7 @@ class CarListVC: UIViewController {
         }
         serviceCallingModel.Completion = {(respose) -> () in
             // Hide indicator
-            if let carRes = respose as? CarListResponse{
+            if let carRes = respose as? CarListResponse {
                 guard carRes.cars != nil else {
                     return
                 }

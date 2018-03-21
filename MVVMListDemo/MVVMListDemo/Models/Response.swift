@@ -33,7 +33,7 @@ class ResponseObject<T:Mappable> : Mappable {
     required init?(map: Map) {
 
     }
-    
+
     func mapping(map: Map) {
         msg <- map["statusText"]
         status <- map["status"]

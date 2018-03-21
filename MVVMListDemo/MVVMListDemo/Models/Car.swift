@@ -5,7 +5,7 @@
 //	Copyright © 2018. All rights reserved.
 //
 
-import Foundation 
+import Foundation
 import ObjectMapper
 class Car : BaseModel {
 
@@ -25,9 +25,9 @@ class Car : BaseModel {
             return nil
         }
     }
-    
+
     enum CarCategory {
-        case suv //7-8 person // Multi Purpose Vehicle
+        case suv // 7-8 person // Multi Purpose Vehicle
         case hatchback
         case sedan
         case couple
@@ -73,8 +73,8 @@ class Car : BaseModel {
 	}
 
 }
-extension Car
-{
+
+extension Car {
     
     static func == (lhs : Car , rhs : Car) -> Bool {
         if lhs.id == rhs.id &&
@@ -87,4 +87,5 @@ extension Car
             return false
         }
     }
+    
 }

@@ -9,7 +9,7 @@
 import Foundation
 
 class CarListAPIViewModel: NSObject {
-    
+
     var beforeComplition: (() -> Void)? = nil
     var Completion: ((BaseModel) -> Void)? = nil
     var Failure: ((String) -> Void)? = nil

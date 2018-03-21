@@ -30,7 +30,7 @@ class CarSpecificationView: UIView {
     var viewModel : CarSpecificationViewModel!
 
     override func awakeFromNib() {
-        
+
     }
     
     func setData() {

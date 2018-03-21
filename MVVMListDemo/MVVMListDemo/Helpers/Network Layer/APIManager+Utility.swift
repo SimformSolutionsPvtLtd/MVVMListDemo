@@ -8,6 +8,7 @@
 
 import Foundation
 extension APIManager {
+
     // MARK:- Error Handling
     func handleError(error:NSError?, failure:Failure, responseCode:Int?) -> Bool {
         if let httpError = error {
@@ -19,7 +20,7 @@ extension APIManager {
                 // no internet
             }
             else if statusCode == -999 {
-                
+
             }
             else {
                 // other error

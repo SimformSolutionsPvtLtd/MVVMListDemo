@@ -15,7 +15,7 @@ class ImageSliderView: UIView {
     var viewModel : CarSpecificationViewModel!
 
     override func awakeFromNib() {
-        
+
     }
     
     func setUpImageScroller() {
@@ -39,4 +39,5 @@ extension ImageSliderView : UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
        pageControl.currentPage = Int(self.scrView.contentOffset.x / self.frame.width)
     }
+    
 }

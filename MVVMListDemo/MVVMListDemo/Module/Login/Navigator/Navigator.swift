@@ -41,7 +41,7 @@ class LoginNavigator: Navigator {
             navigationController?.pushViewController(viewController, animated: true)
         }
     }
-    
+
     // MARK: - Private
     private func makeViewController(for destination: Destination) -> UIViewController {
         switch destination {
@@ -55,4 +55,3 @@ class LoginNavigator: Navigator {
     }
     
 }
-

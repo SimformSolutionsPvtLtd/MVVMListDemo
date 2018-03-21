@@ -21,5 +21,5 @@ class LoginResponse : BaseModel {
         user <- map["result"]
         status <- map["status"]
     }
-    
+
 }

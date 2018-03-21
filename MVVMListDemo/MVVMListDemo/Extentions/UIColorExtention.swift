@@ -18,4 +18,3 @@ extension UIColor {
         return UIColor(named: "AppLightBlueColor") ?? .clear
     }
 }
-

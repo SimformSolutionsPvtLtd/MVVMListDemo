@@ -33,12 +33,12 @@ import UIKit
     override func awakeFromNib() {
         self.setupView()
     }
-    
+
     override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         self.setupView()
     }
-    
+
     func setupView() {
         // set background color
         self.backgroundColor = bgColor

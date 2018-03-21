@@ -18,14 +18,14 @@ private struct TJUserConstants {
     static let DOBKey                 = "DOBKey"
 }
 
-enum Gender : String {
+enum Gender: String {
     case male   = "male"
     case female = "female"
     case other
 }
 
 class UserManager {
-    
+
     // static properties get lazy evaluation and dispatch_once_t for free
     struct Static {
         static let instance = UserManager()
@@ -124,7 +124,7 @@ class UserManager {
         }
     }
    
-    //MARK: - util variables
+    // MARK: - util variables
     
     // Gender as enum
     var gender : Gender {
@@ -145,10 +145,8 @@ class UserManager {
         get {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy/MM/dd"
-            if let date = dateFormatter.date(from: self.dateOfBirth ?? "")
-            {
-                if let num : Int = Date().yearsFrom(date)
-                {
+            if let date = dateFormatter.date(from: self.dateOfBirth ?? "") {
+                if let num : Int = Date().yearsFrom(date) as? Int {
                     return num
                 }
             }

@@ -18,5 +18,5 @@ extension CarDetailRoute where Self: UIViewController {
         carDetailVC.car = car
         self.navigationController?.pushViewController(carDetailVC, animated: true)
     }
-    
+
 }

@@ -18,6 +18,7 @@ enum FuelType : String {
     case diesel   = "Diesel"
     case electric = "Electric"
     case other
+
     func getFualDetail() -> String {
         switch self {
         case .petrol, .diesel, .electric:
@@ -60,7 +61,7 @@ class Spec : BaseModel {
     func getSeatingCapacity() -> String {
         return "\(self.seatingCapacity!) persons"
     }
-    
+
     func toDictionary() -> [String: AnyObject] {
         var dictionary = [String: AnyObject]()
         if alternateFuel != nil {
@@ -98,4 +99,5 @@ class Spec : BaseModel {
         }
         return dictionary
     }
+    
 }

@@ -14,7 +14,7 @@ class BaseModel: NSObject,Mappable {
     required init?(map: Map) {
 
     }
-    
+
     override init() {
         
     }

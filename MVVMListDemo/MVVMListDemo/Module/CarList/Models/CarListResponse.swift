@@ -21,6 +21,5 @@ class CarListResponse : BaseModel {
         cars <- map["result"]
         status <- map["status"]
     }
-    
-}
 
+}

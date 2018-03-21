@@ -19,6 +19,8 @@
 - [x] Handy extentions for extend fucntionality of existing componets
 - [x] High scalable user manager class
 - [x] Custom controls to maintain app theme
+- [x] Lint using codecy and tailor
+- [x] Automated building and releasing using fastlane
 
 
 ## Requirements

@@ -10,7 +10,7 @@ import UIKit
 
 @IBDesignable class LoginTextField: UITextField {
 
-    fileprivate var ImgIcon: UIImageView?
+    fileprivate var imgIcon: UIImageView?
 
     @IBInspectable var errorEntry: Bool = false {
         didSet {
@@ -43,7 +43,7 @@ import UIKit
             self.setNeedsDisplay()
         }
     }
-    @IBInspectable var txtImage : UIImage? {
+    @IBInspectable var txtImage: UIImage? {
         didSet {
             self.setNeedsDisplay()
         }
@@ -104,8 +104,8 @@ import UIKit
         
         // setting custom placeholder color
         if let strPlaceHolder: String = self.placeholder {
-            self.attributedPlaceholder = NSAttributedString(string:strPlaceHolder,
-                                                            attributes:[NSAttributedStringKey.foregroundColor:placeHolerColor])
+            self.attributedPlaceholder = NSAttributedString(string: strPlaceHolder,
+                                                            attributes: [NSAttributedStringKey.foregroundColor:placeHolerColor])
         }
     }
     
@@ -114,4 +114,3 @@ import UIKit
     }
     
 }
-

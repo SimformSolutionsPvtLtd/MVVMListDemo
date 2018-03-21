@@ -127,26 +127,26 @@ class UserManager {
     // MARK: - util variables
     
     // Gender as enum
-    var gender : Gender {
+    var gender: Gender {
         get {
             return Gender(rawValue: self.genderStr!)!
         }
     }
     
     // Full Name
-    var fullName : String {
+    var fullName: String {
         get {
             return self.firstname! + " "  + self.lastname!
         }
     }
     
     // Age calculated from date of birth
-    var Age: Int {
+    var age: Int {
         get {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy/MM/dd"
             if let date = dateFormatter.date(from: self.dateOfBirth ?? "") {
-                if let num : Int = Date().yearsFrom(date) as? Int {
+                if let num:Int = Date().yearsFrom(date) as? Int {
                     return num
                 }
             }
@@ -155,10 +155,9 @@ class UserManager {
     }
 }
 
-extension UserManager
-{
+extension UserManager {
     
-    func setData(dic : [String : AnyObject]) {
+    func setData(dic: [String:AnyObject]) {
         self.firstname = dic["fName"] as? String
         self.lastname = dic["lName"] as? String
         self.emailAddress  = dic["email"] as? String
@@ -186,4 +185,5 @@ extension UserManager
         // clear api session token
         apiMgr.clearSession()
     }
+
 }

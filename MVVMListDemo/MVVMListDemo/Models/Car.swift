@@ -7,17 +7,17 @@
 
 import Foundation
 import ObjectMapper
-class Car : BaseModel {
+class Car: BaseModel {
 
     // MARK: - Variables
-	var companyOrigin : String?
-	var details : String?
-	var id : Int?
-	var name : String?
-	var price : String?
-	var specs : Spec?
-	var img : [String]?
-    var category : CarCategory? {
+	var companyOrigin: String?
+	var details: String?
+	var id: Int?
+	var name: String?
+	var price: String?
+	var specs: Spec?
+	var img: [String]?
+    var category: CarCategory? {
         get {
             if specs != nil {
                 return CarCategory.init(numberOfPerson: specs!.seatingCapacity!)
@@ -76,14 +76,11 @@ class Car : BaseModel {
 
 extension Car {
     
-    static func == (lhs : Car , rhs : Car) -> Bool {
+    static func == (lhs: Car, rhs: Car) -> Bool {
         if lhs.id == rhs.id &&
-            lhs.name == rhs.name
-        {
+            lhs.name == rhs.name {
             return true
-        }
-        else
-        {
+        } else {
             return false
         }
     }

@@ -48,7 +48,7 @@ import UIKit
         self.layer.masksToBounds = true
 
         // set capital title
-        self.setTitle(self.titleLabel?.text!.capitalized , for: .normal)
+        self.setTitle(self.titleLabel?.text!.capitalized, for: .normal)
 
         // set title color and font
         self.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .regular)

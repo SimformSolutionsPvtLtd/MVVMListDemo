@@ -10,7 +10,7 @@ import Foundation
 extension APIManager {
 
     // MARK:- Error Handling
-    func handleError(error:NSError?, failure:Failure, responseCode:Int?) -> Bool {
+    func handleError(error: NSError?, failure: Failure, responseCode: Int?) -> Bool {
         if let httpError = error {
             let statusCode = httpError.code
             print("error code failure = \(statusCode)")

@@ -48,4 +48,3 @@ extension AppDelegate {
         return UIApplication.shared.delegate as! AppDelegate
     }
 }
-

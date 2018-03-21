@@ -16,7 +16,7 @@ class BaseModel: NSObject,Mappable {
     }
 
     override init() {
-        
+
     }
     
     func mapping(map: Map) {

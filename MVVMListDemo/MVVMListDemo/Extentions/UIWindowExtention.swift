@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 extension UIWindow {
 
-    func switchRootViewController(_ viewController: UIViewController, withNavigation : Bool,   animated: Bool = true, duration: TimeInterval = 0.5, options: UIViewAnimationOptions = .transitionFlipFromRight, completion: (() -> Void)? = nil) {
+    func switchRootViewController(_ viewController: UIViewController, withNavigation: Bool,   animated: Bool = true, duration: TimeInterval = 0.5, options: UIViewAnimationOptions = .transitionFlipFromRight, completion: (() -> Void)? = nil) {
         guard animated else {
             rootViewController = viewController
             return

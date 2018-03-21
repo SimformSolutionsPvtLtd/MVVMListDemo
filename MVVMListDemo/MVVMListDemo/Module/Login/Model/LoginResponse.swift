@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-class LoginResponse : BaseModel {
+class LoginResponse: BaseModel {
 
     // MARK:- Variables
     var message : String?

@@ -10,9 +10,9 @@ import UIKit
 
 class CarListCell: UITableViewCell {
 
-    @IBOutlet var lblCarName : UILabel!
-    @IBOutlet var lblPrice : UILabel!
-    @IBOutlet var imgCar : UIImageView!
+    @IBOutlet var lblCarName: UILabel!
+    @IBOutlet var lblPrice: UILabel!
+    @IBOutlet var imgCar: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()

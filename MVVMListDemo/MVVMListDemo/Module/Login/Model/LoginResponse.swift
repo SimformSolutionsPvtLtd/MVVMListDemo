@@ -9,14 +9,14 @@
 import Foundation
 import ObjectMapper
 
-class LoginResponse : BaseModel{
-    
+class LoginResponse : BaseModel {
+
+    // MARK:- Variables
     var message : String?
     var status : Bool?
     var user : [String: AnyObject]?
     
-    override func mapping(map: Map)
-    {
+    override func mapping(map: Map) {
         message <- map["message"]
         user <- map["result"]
         status <- map["status"]

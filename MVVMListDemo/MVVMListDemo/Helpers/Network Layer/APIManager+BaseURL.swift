@@ -7,12 +7,12 @@
 //
 
 import Foundation
-extension APIManager
-{
-    func makeAppUrl(endpoint: APIEndPoints) -> String
-    {
+extension APIManager {
+
+    func makeAppUrl(endpoint: APIEndPoints) -> String {
         // NB: include trailing slashes in APP URL strings!
         let url = "\(APIConstants.baseUrl)/\(endpoint.rawValue)"
         return url
     }
+    
 }

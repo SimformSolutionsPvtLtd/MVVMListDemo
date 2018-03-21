@@ -10,6 +10,7 @@ import UIKit
 
 class CarSpecificationView: UIView {
 
+    // MARK:- IBOutlets
     @IBOutlet weak var lblLength:UILabel!
     @IBOutlet weak var lblWidth:UILabel!
     @IBOutlet weak var lblHeight:UILabel!
@@ -21,17 +22,17 @@ class CarSpecificationView: UIView {
     @IBOutlet weak var lblWheels:UILabel!
     @IBOutlet weak var lblFrontBrakeType:UILabel!
     @IBOutlet weak var lblRearBrakeType:UILabel!
-    
     @IBOutlet weak var lblCarName:UILabel!
     @IBOutlet weak var lblCarPrice:UILabel!
     @IBOutlet weak var lblDescription:UILabel!
     
+    // MARK:- Variables
     var viewModel : CarSpecificationViewModel!
     override func awakeFromNib() {
         
     }
-    func setData()
-    {
+    
+    func setData() {
         lblLength.text          = viewModel.specs.length
         lblWidth.text           = viewModel.specs.width
         lblHeight.text          = viewModel.specs.height

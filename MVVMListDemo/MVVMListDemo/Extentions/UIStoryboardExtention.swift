@@ -8,8 +8,8 @@
 
 import Foundation
 import UIKit
-extension UIStoryboard {
 
+extension UIStoryboard {
     
     /// Fetch view controller from storyboard with use of class type
     public func instantiateVC<T>(_ identifier: T.Type) -> T? {
@@ -20,11 +20,12 @@ extension UIStoryboard {
             return nil
         }
     }
+    
 }
 
 
 extension UIStoryboard {
-    
+
     //MARK: - storyboard declaration -
     private static var carDetailStoryboard: UIStoryboard {
         return UIStoryboard(name: "CarDetail", bundle: Bundle.main)
@@ -36,18 +37,17 @@ extension UIStoryboard {
         return UIStoryboard(name: "Login", bundle: Bundle.main)
     }
     
-    //MARK: -  CarList storyboard -
+    //MARK:- CarList storyboard
     class func carListVC() -> CarListVC {
         return UIStoryboard.mainStoryboard.instantiateVC(CarListVC.self)!
     }
     
-    
-    //MARK: -  CarDetail storyboard -
+    //MARK:- CarDetail storyboard
     class func carDetailVC() -> CarDetailVC {
         return UIStoryboard.carDetailStoryboard.instantiateVC(CarDetailVC.self)!
     }
     
-    //MARK: - login storyboard
+    //MARK:- Login storyboard
     class func loginVC() -> LoginVC {
         return UIStoryboard.loginStoryboard.instantiateVC(LoginVC.self)!
     }

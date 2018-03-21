@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable class LoginTextField: UITextField {
-    
+
     fileprivate var ImgIcon: UIImageView?
     
     @IBInspectable var errorEntry: Bool = false {
@@ -48,9 +48,11 @@ import UIKit
             self.setNeedsDisplay()
         }
     }
+    
     override func textRect(forBounds bounds: CGRect) -> CGRect {
         return self.newBounds(bounds)
     }
+    
     override func editingRect(forBounds bounds: CGRect) -> CGRect {
         return self.newBounds(bounds)
     }
@@ -65,9 +67,8 @@ import UIKit
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        //setting left image
-        if (txtImage != nil)
-        {
+        // setting left image
+        if txtImage != nil {
             let imgView = UIImageView(image: txtImage)
             imgView.frame = CGRect(x: 0, y: 0, width: CGFloat(imageWidth), height: self.frame.height)
             imgView.contentMode = .center
@@ -77,8 +78,7 @@ import UIKit
         self.font = UIFont.systemFont(ofSize: 15, weight: .medium)
     }
     
-    override func draw(_ rect: CGRect)
-    {
+    override func draw(_ rect: CGRect) {
         let height = self.bounds.height
         
         // get the current drawing context
@@ -102,15 +102,15 @@ import UIKit
         context?.closePath()
         context?.strokePath()
         
-        //Setting custom placeholder color
+        // setting custom placeholder color
         if let strPlaceHolder: String = self.placeholder
         {
             self.attributedPlaceholder = NSAttributedString(string:strPlaceHolder,
                                                             attributes:[NSAttributedStringKey.foregroundColor:placeHolerColor])
         }
     }
-    override func leftViewRect(forBounds bounds: CGRect) -> CGRect
-    {
+    
+    override func leftViewRect(forBounds bounds: CGRect) -> CGRect {
         return CGRect(x: 0, y: 0, width: CGFloat(imageWidth), height: self.frame.height)
     }
 }

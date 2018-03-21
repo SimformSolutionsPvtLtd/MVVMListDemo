@@ -9,17 +9,18 @@
 import Foundation
 import ObjectMapper
 
-class CarListResponse : BaseModel{
-    
+class CarListResponse : BaseModel {
+
+    // MARK:- Variables
     var message : String?
     var status : Bool?
     var cars : [Car]?
     
-    override func mapping(map: Map)
-    {
+    override func mapping(map: Map) {
         message <- map["message"]
         cars <- map["result"]
         status <- map["status"]
     }
+    
 }
 

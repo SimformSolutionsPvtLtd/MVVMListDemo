@@ -3,14 +3,13 @@
 //
 //	Create by Tejas Ardeshna on 16/3/2018
 //	Copyright © 2018. All rights reserved.
-//	
+//
 
 import Foundation 
 import ObjectMapper
-
-
-class Car : BaseModel{
-
+class Car : BaseModel {
+    
+    // MARK: - Variables
 	var companyOrigin : String?
 	var details : String?
 	var id : Int?
@@ -18,8 +17,8 @@ class Car : BaseModel{
 	var price : String?
 	var specs : Spec?
 	var img : [String]?
-    var category : CarCategory?{
-        get{
+    var category : CarCategory? {
+        get {
             if specs != nil
             {
                 return CarCategory.init(numberOfPerson: specs!.seatingCapacity!)
@@ -34,13 +33,21 @@ class Car : BaseModel{
         case sedan
         case couple
         init(numberOfPerson n: Int) {
-            if n <= 2 { self = .couple }
-            else if n < 5 { self = .hatchback }
-            else if n < 6 { self = .sedan }
-            else { self = .suv }
+            if n <= 2 {
+                self = .couple
+            }
+            else if n < 5 {
+                self = .hatchback
+            }
+            else if n < 6 {
+                self = .sedan
+            }
+            else {
+                self = .suv
+            }
         }
-        func getDescription() -> String
-        {
+        
+        func getDescription() -> String {
             switch self {
             case .suv:
                 return "Sports utility vehicle is generally used for off road purpose."
@@ -54,8 +61,7 @@ class Car : BaseModel{
         }
     }
     
-    override func mapping(map: Map)
-	{
+    override func mapping(map: Map) {
 		companyOrigin <- map["Company_Origin"]
 		details <- map["Details"]
 		id <- map["Id"]
@@ -69,8 +75,8 @@ class Car : BaseModel{
 }
 extension Car
 {
-    static func == (lhs : Car , rhs : Car) -> Bool
-    {
+    
+    static func == (lhs : Car , rhs : Car) -> Bool {
         if lhs.id == rhs.id &&
             lhs.name == rhs.name
         {

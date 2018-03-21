@@ -13,11 +13,12 @@ class ImageSliderView: UIView {
     @IBOutlet var pageControl : UIPageControl!
     @IBOutlet var scrView : UIScrollView!
     var viewModel : CarSpecificationViewModel!
+    
     override func awakeFromNib() {
         
     }
-    func setUpImageScroller()
-    {
+    
+    func setUpImageScroller() {
         var xAxis : CGFloat   = 0.0
         pageControl.numberOfPages =  viewModel.car.img!.count
         for (_, url) in viewModel.car.img!.enumerated() {
@@ -31,11 +32,11 @@ class ImageSliderView: UIView {
     }
 }
 
-//MARK :- UIScrollView Delagates
+//MARK:- UIScrollView Delagates
 extension ImageSliderView : UIScrollViewDelegate
 {
-    func scrollViewDidScroll(_ scrollView: UIScrollView)
-    {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
        pageControl.currentPage = Int(self.scrView.contentOffset.x / self.frame.width)
     }
 }

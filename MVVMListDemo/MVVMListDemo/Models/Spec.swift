@@ -3,18 +3,17 @@
 //
 //	Create by Tejas Ardeshna on 16/3/2018
 //	Copyright © 2018. All rights reserved.
-//	
+//
 
 import Foundation 
 import ObjectMapper
-enum BreakType : String
-{
+enum BreakType : String {
     case drum     = "Drum"
     case disc     = "Disc"
     case other
 }
-enum FuelType : String
-{
+
+enum FuelType : String {
     case petrol   = "Petrol"
     case diesel   = "Diesel"
     case electric = "Electric"
@@ -30,7 +29,7 @@ enum FuelType : String
     }
 }
 
-class Spec : BaseModel{
+class Spec : BaseModel {
 
 	var alternateFuel : FuelType = FuelType.other
 	var displacement : String?
@@ -44,8 +43,7 @@ class Spec : BaseModel{
 	var wheels : String?
 	var width : String?
 
-    override func mapping(map: Map)
-	{
+    override func mapping(map: Map) {
 		alternateFuel <- (map["Alternate Fuel"], EnumTransform<FuelType>())
 		displacement <- map["Displacement"]
 		frontBrakeType <- (map["Front Brake Type"], EnumTransform<BreakType>())
@@ -57,46 +55,45 @@ class Spec : BaseModel{
 		seatingCapacity <- map["Seating Capacity"]
 		wheels <- map["Wheels"]
 		width <- map["Width"]
-        
 	}
-    func getSeatingCapacity() -> String{
+    
+    func getSeatingCapacity() -> String {
         return "\(self.seatingCapacity!) persons"
     }
     
-    func toDictionary() -> [String: AnyObject]
-    {
+    func toDictionary() -> [String: AnyObject] {
         var dictionary = [String: AnyObject]()
-        if alternateFuel != nil{
-            dictionary["AlternateFuel"] = alternateFuel as AnyObject
+        if alternateFuel != nil {
+            dictionary["AlternateFuel"] = alternateFuel.rawValue as AnyObject
         }
-        if displacement != nil{
+        if displacement != nil {
             dictionary["Displacement"] = displacement as AnyObject
         }
-        if frontBrakeType != nil{
-            dictionary["FrontBrakeType"] = frontBrakeType as AnyObject
+        if frontBrakeType != nil {
+            dictionary["FrontBrakeType"] = frontBrakeType.rawValue as AnyObject
         }
-        if height != nil{
+        if height != nil {
             dictionary["Height"] = height as AnyObject
         }
-        if length != nil{
+        if length != nil {
             dictionary["Length"] = length as AnyObject
         }
-        if maxPower != nil{
+        if maxPower != nil {
             dictionary["MaxPower"] = maxPower as AnyObject
         }
-        if maxTorque != nil{
+        if maxTorque != nil {
             dictionary["MaxTorque"] = maxTorque as AnyObject
         }
-        if rearBrakeType != nil{
-            dictionary["RearBrakeType"] = rearBrakeType as AnyObject
+        if rearBrakeType != nil {
+            dictionary["RearBrakeType"] = rearBrakeType.rawValue as AnyObject
         }
-        if seatingCapacity != nil{
+        if seatingCapacity != nil {
             dictionary["SeatingCapacity"] = seatingCapacity as AnyObject
         }
-        if wheels != nil{
+        if wheels != nil {
             dictionary["Wheels"] = wheels as AnyObject
         }
-        if width != nil{
+        if width != nil {
             dictionary["Width"] = width as AnyObject
         }
         return dictionary

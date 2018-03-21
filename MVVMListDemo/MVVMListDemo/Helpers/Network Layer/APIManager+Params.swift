@@ -13,6 +13,6 @@ struct LoginParam {
     static let password = "password"
 }
 struct CarListParam {
-    
+
 }
 

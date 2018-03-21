@@ -13,7 +13,7 @@ class CarListCell: UITableViewCell {
     @IBOutlet var lblCarName : UILabel!
     @IBOutlet var lblPrice : UILabel!
     @IBOutlet var imgCar : UIImageView!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,8 +23,8 @@ class CarListCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
     }
-    func configureCell(car : Car)
-    {
+
+    func configureCell(car : Car) {
         lblCarName.text = car.name
         lblPrice.text = car.price
         imgCar.kf.setImage(with: URL(string: car.img!.first!))

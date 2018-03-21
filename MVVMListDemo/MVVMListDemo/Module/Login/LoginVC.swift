@@ -9,23 +9,25 @@
 import UIKit
 
 class LoginVC: UIViewController {
-    
-    // MARK: - Variables
+
+    // MARK:- Variables
     private var navigator: LoginNavigator!
     
-    // MARK: - IBOutlets
+    // MARK:- IBOutlets
     @IBOutlet weak var txtUserName: LoginTextField!
     @IBOutlet weak var txtPassword: LoginTextField!
     
-    // MARK: - Action Methods
+    // MARK:- Action Methods
     @IBAction func btnLoginClicked(_ sender: Any) {
         self.dismissKeyboard()
         self.navigator.navigate(to: .loginCompleted)
     }
+    
     @IBAction func btnSignUpClicked(_ sender: Any) {
         self.dismissKeyboard()
         navigator.navigate(to: .signup)
     }
+    
     @IBAction func btnForgotPasswordClicked(_ sender: Any) {
         self.dismissKeyboard()
          navigator.navigate(to: .forgotPassword)

@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 class CarListVC: UIViewController {
     
-    
     // MARK: - IBOutlets
     @IBOutlet weak var tableView:UITableView!
     
@@ -19,18 +18,19 @@ class CarListVC: UIViewController {
     var tableviewDidSelecteAtIndexPath : TableViewDataModel.didSelectItemAtIndex!
     var tableviewViewCellConfigure:TableViewDataModel.tableviewCellConfiguration!
     var tableviewViewheightForItem : TableViewDataModel.heightForRowAtIndex!
-    
     var cars = [Car]()
     var serviceCallingModel:CarListAPIViewModel = CarListAPIViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.apiParsingClosers()
-        self.TableViewClouser()
-        self.initialiazTableModel()
+        self.tableViewClouser()
+        self.initialiaseTableModel()
         self.serviceCallingModel.getCarList()
     }
-    func apiParsingClosers()
-    {
+    
+    //MARK:- setup api closers
+    func apiParsingClosers() {
         serviceCallingModel.beforeComplition = { () -> () in
             // Hide indicator
         }
@@ -50,7 +50,9 @@ class CarListVC: UIViewController {
             // show alert with this message -> meesage
         }
     }
-    func initialiazTableModel() -> Void {
+    
+    //MARK:- initialise table model
+    func initialiaseTableModel() -> Void {
         if self.settingDataSource == nil {
             self.settingDataSource = TableViewDataModel.init(items: [cars] as [[AnyObject]],
                                                              forTableView: self.tableView,
@@ -61,15 +63,17 @@ class CarListVC: UIViewController {
                                                              withEstimateHeight: [120])
             self.tableView.dataSource = self.settingDataSource
             self.tableView.delegate = self.settingDataSource
-        }else{
+        } else {
             self.settingDataSource.updateTableView(items: [cars] as [[AnyObject]])
         }
         DispatchQueue.main.async {
            self.tableView.reloadData()
         }
     }
-    func TableViewClouser() -> Void {
-        self.tableviewViewCellConfigure = {(cell,item,indexPath)  -> Void in
+    
+    //MARK:- setup table closers
+    func tableViewClouser() -> Void {
+        self.tableviewViewCellConfigure = {(cell,item,indexPath) -> Void in
             guard let carListCell = cell as? CarListCell, let car = item as? Car else{
                 return
             }

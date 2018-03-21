@@ -16,13 +16,13 @@ import UIKit
             self.backgroundColor = bgColor
         }
     }
-    
+
     @IBInspectable var titleColor: UIColor = UIColor.white {
         didSet {
             self.setTitleColor(titleColor, for: .normal)
         }
     }
-    
+
     @IBInspectable var cornerRadius: CGFloat = 3.0 {
         didSet {
             self.layer.cornerRadius = cornerRadius
@@ -59,8 +59,9 @@ import UIKit
         self.setNeedsLayout()
         self.setNeedsDisplay()
     }
-    override func draw(_ rect: CGRect)
-    {
+
+    override func draw(_ rect: CGRect) {
         
     }
+    
 }

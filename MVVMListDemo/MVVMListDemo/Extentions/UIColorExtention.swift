@@ -9,10 +9,11 @@
 import UIKit
 
 extension UIColor {
-    
-   static var appBlue: UIColor {
+
+    static var appBlue: UIColor {
         return UIColor(named: "AppBlueColor") ?? .clear
     }
+
     static var appLightBlue: UIColor {
         return UIColor(named: "AppLightBlueColor") ?? .clear
     }

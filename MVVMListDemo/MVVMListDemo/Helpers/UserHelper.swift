@@ -9,7 +9,6 @@
 import Foundation
 
 private struct TJUserConstants {
-    
     // NSUserDefaults persistence keys
     static let userIdKey              = "userIdKey"
     static let EmailKey               = "EmailKey"
@@ -19,11 +18,13 @@ private struct TJUserConstants {
     static let DOBKey                 = "DOBKey"
     
 }
-enum Gender : String{
+
+enum Gender : String {
     case male   = "male"
     case female = "female"
     case other
 }
+
 class UserManager {
     
     // static properties get lazy evaluation and dispatch_once_t for free
@@ -43,7 +44,7 @@ class UserManager {
     
     // username etc. are backed by NSUserDefaults, no need for further local storage
     
-    //user emailAddress
+    // user email Address
     var emailAddress: String? {
         
         get {
@@ -56,7 +57,7 @@ class UserManager {
         }
         
     }
-    // user firstname
+    // user first name
     var firstname: String? {
         
         get {
@@ -70,7 +71,7 @@ class UserManager {
         
     }
     
-    
+    // user last name
     var lastname: String? {
         
         get {
@@ -84,6 +85,7 @@ class UserManager {
         
     }
     
+    // user gender as a string
     private var genderStr: String? {
         
         get {
@@ -97,6 +99,7 @@ class UserManager {
         
     }
     
+    // user date of birth as string
     var dateOfBirth: String? {
         
         get {
@@ -110,6 +113,7 @@ class UserManager {
         
     }
     
+    // user id
     var userId: Int?
     {
         get {
@@ -121,23 +125,25 @@ class UserManager {
             userDefaults.synchronize()
         }
     }
-    
    
     //MARK: - util variables
-    var gender : Gender{
+    
+    // Gender as enum
+    var gender : Gender {
         get{
             return Gender(rawValue: self.genderStr!)!
         }
     }
     
-    var fullName : String{
+    // Full Name
+    var fullName : String {
         get{
             return self.firstname! + " "  + self.lastname!
         }
     }
     
-    var Age: Int
-    {
+    // Age calculated from date of birth
+    var Age: Int {
         get {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy/MM/dd"
@@ -155,16 +161,16 @@ class UserManager {
 
 extension UserManager
 {
-    func setData(dic : [String : AnyObject])
-    {
+    
+    func setData(dic : [String : AnyObject]) {
         self.firstname = dic["fName"] as? String
         self.lastname = dic["lName"] as? String
         self.emailAddress  = dic["email"] as? String
         self.genderStr = dic["dob"] as? String
         self.userId  = dic["id"] as? Int
     }
-    func clearUUID()
-    {
+    
+    func clearUUID() {
         self.firstname    = nil
         self.lastname     = nil
         self.emailAddress = nil
@@ -181,7 +187,7 @@ extension UserManager
         userDefaults.removeObject(forKey: TJUserConstants.GenderKey)
         userDefaults.synchronize()
         
-        //clear api session token
+        // clear api session token
         apiMgr.clearSession()
     }
 }

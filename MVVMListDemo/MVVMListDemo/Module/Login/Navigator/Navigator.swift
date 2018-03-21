@@ -30,7 +30,7 @@ class LoginNavigator: Navigator {
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
-    
+
     // MARK: - Navigator
     func navigate(to destination: Destination) {
         let viewController = makeViewController(for: destination)
@@ -53,5 +53,6 @@ class LoginNavigator: Navigator {
             return UIStoryboard.signUpVC()
         }
     }
+    
 }
 

@@ -12,9 +12,11 @@ protocol CarDetailRoute {
     func openCarDetail(for car: Car)
 }
 extension CarDetailRoute where Self: UIViewController {
+
     func openCarDetail(for car: Car) {
         let carDetailVC = UIStoryboard.carDetailVC()
         carDetailVC.car = car
         self.navigationController?.pushViewController(carDetailVC, animated: true)
     }
+    
 }

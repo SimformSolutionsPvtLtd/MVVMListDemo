@@ -9,14 +9,13 @@
 import Foundation
 
 class CarSpecificationViewModel: NSObject,CarProtocol {
+
     var car : Car!
     var specs : Spec!
-    
     var Name: Dynamic<String>
     var Price: Dynamic<String>
     
-    init(withCar car : Car )
-    {
+    init(withCar car : Car ) {
         self.car   = car
         self.specs = car.specs!
         self.Name  = Dynamic(car.name!)

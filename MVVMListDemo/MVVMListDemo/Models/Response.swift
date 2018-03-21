@@ -10,11 +10,12 @@ import Foundation
 import ObjectMapper
 
 class ResponseArray<T:Mappable> : Mappable {
+
     var msg : String?
     var status : Int?
     var result : [T]?
     required init?(map: Map) {
-        
+
     }
    
     func mapping(map: Map) {
@@ -24,11 +25,12 @@ class ResponseArray<T:Mappable> : Mappable {
     }
 }
 class ResponseObject<T:Mappable> : Mappable {
+
     var msg : String?
     var status : Int?
     var result : T?
     required init?(map: Map) {
-        
+
     }
     
     func mapping(map: Map) {

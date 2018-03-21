@@ -65,3 +65,4 @@ $ pod install
 [license-url]: https://github.com/tejas-ardeshna/TJProfileImage/blob/master/LICENSE.md
 [codebeat-image]: https://codebeat.co/badges/c19b47ea-2f9d-45df-8458-b2d952fe9dad
 [codebeat-url]: https://codebeat.co/projects/github-com-vsouza-awesomeios-com
+

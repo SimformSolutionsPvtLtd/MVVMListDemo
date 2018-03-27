@@ -8,7 +8,7 @@
 
 import Foundation
 
-class CarSpecificationViewModel: NSObject,CarProtocol {
+class CarSpecificationViewModel: NSObject, CarProtocol {
 
     var car : Car!
     var specs : Spec!
